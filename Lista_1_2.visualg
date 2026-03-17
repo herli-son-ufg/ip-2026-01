@@ -1,0 +1,35 @@
+algoritmo "Lista_1_2"
+
+var
+
+  p_total, quantidade, i: inteiro
+  p_p, p_g, p_a, p_c, renda: real
+  p, g, a, c: real
+
+inicio
+  p <- 1
+  g <- 5
+  a <- 10
+  c <- 20
+  renda <- 0
+
+  leia(quantidade)
+
+  para i de 0 ate quantidade faca
+
+    leia(p_total)
+    leia(p_p)
+    leia(p_g)
+    leia(p_a)
+    leia(p_c)
+
+    renda <- renda + (((p_p / 100) * p_total) * p)
+    renda <- renda + (((p_g / 100) * p_total) * g)
+    renda <- renda + (((p_a / 100) * p_total) * a)
+    renda <- renda + (((p_c / 100) * p_total) * c)
+
+    escreval(renda)
+
+  fimpara
+
+fimalgoritmo
