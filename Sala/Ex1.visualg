@@ -1,0 +1,46 @@
+algoritmo "Triangulo"
+
+var
+  l1, l2, l3 : real
+  valido : logico
+inicio
+
+  leia(l1)
+  leia(l2)
+  leia(l3)
+
+  valido <- verdadeiro
+
+  se(valido)entao
+    valido <- l1 < (l2 + l3)
+    valido <- valido e (abs(l2 - l3) < l1)
+  fimse
+
+  se(valido)entao
+    valido <- l2 < (l1 + l3)
+    valido <- valido e (abs(l1 - l3) < l2)
+  fimse
+
+  se(valido)entao
+    valido <- l3 < (l2 + l1)
+    valido <- valido e (abs(l2 - l1) < l3)
+  fimse
+
+  se(valido)entao
+    escreva("É triângulo ")
+
+    se(l1 = l2 e l1 = l3)entao
+    escreva("equilatero")
+    senao
+      se (l1 <> l2 e l1 <> l3 e l3 <> l2) entao
+        escreva("escaleno")
+      senao
+        escreva("isósceles")
+      fimse
+    fimse
+
+  senao
+    escreva("Não é triângulo ")
+  fimse
+
+fimalgoritmo
